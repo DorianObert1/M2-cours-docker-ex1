@@ -19,3 +19,13 @@ docker ps
 
 curl -I http://localhost:9001
 ```
+
+```bash
+docker build -t exo4-3d-rotate-tube --build-arg REPO_URL=https://github.com/withaarzoo/3D-Rotate-Tube exercices
+
+docker rm -f exo4-3d-rotate-tube
+
+docker run -d --name exo4-3d-rotate-tube -p 9001:80 exo4-3d-rotate-tube
+
+curl -I http://localhost:9001
+```
